@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #23035fa3;
+}
+.ActBtn {
+  color: #FDD531 !important;
+}
+.navbar-nav li{
+  margin-left: 10px;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navbar-brand span {
+  color: #FDD531;
+}
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 700;
+}
+.nav-link {
+  position: relative;
+  color: #cbcbcb;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover{
+  color: #FDD531;
+
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #FDD531;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::before {
+  width: 100%;
+  visibility: visible;
+
+
+}

@@ -1,0 +1,28 @@
+.container-fluid{
+  background-color: #1A0745;
+  color: #e3e3e3;
+}
+.icon{
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+ border: 1px solid #FDD531;
+ overflow: hidden;
+}
+.icon i{
+color: #FDD531;
+font-size: 20px;
+padding: 5px;
+
+
+}
+.icon:hover , .icon:hover i{
+  background-color: #ffffff;
+  color: #FDD531;
+
+}
+h2{
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

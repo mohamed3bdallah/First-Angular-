@@ -1,0 +1,93 @@
+<div class="hero">
+  <div
+    class="container p-4 d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="row mb-1 zed1 g-3 d-flex justify-content-center text-center">
+      <div class="mb-2 pt-5 w-100 col-md-12">
+        <img class="image" src="images/logo.png" alt="logo" />
+      </div>
+      <div
+        class="hover col-sm-6 col-md-4 overflow-hidden"
+        data-bs-toggle="modal"
+        data-bs-target="#modalId"
+        (click)="display('images/comics/1.png')"
+      >
+        <div>
+          <img class="w-100 rounded-2" src="images/comics/1.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="easter hover col-sm-6 col-md-4"
+        data-bs-toggle="modal"
+        data-bs-target="#modalId"
+        (click)="display('images/comics/3.png')"
+      >
+        <div class="easter1 w-75">
+          <img class="w-50" src="images/bat3.png" alt="" />
+        </div>
+        <div>
+          <img class="w-100 rounded-2" src="images/comics/3.png" alt="" />
+        </div>
+      </div>
+      <div class="hover col-sm-6 col-md-4 overflow-hidden">
+        <div class="zed" data-bs-toggle="modal" data-bs-target="#modalId"
+        (click)="display('images/comics/5.png')">
+          <img class="rounded-2" src="images/comics/5.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="row g-3 d-flex justify-content-center align-items-center text-center"
+    >
+      @for (item of images; track $index) {
+      <div class="hover col-sm-6 col-md-4 overflow-hidden">
+        <div
+          (click)="display(item)"
+          data-bs-toggle="modal"
+          data-bs-target="#modalId"
+        >
+          <img class="w-100 rounded-2" [src]="item" alt="" />
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  id="modalId"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row w-100">
+            <div class="col-md-12 m-auto">
+              <div>
+                <img class="rounded-4 w-100" [src]="img" alt="comic" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modalId = document.getElementById("modalId");
+
+  modalId.addEventListener("show.bs.modal", function (event) {
+    // Button that triggered the modal
+    let button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    let recipient = button.getAttribute("data-bs-whatever");
+
+    // Use above variables to manipulate the DOM
+  });
+</script>

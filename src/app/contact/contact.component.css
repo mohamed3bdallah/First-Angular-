@@ -1,0 +1,8 @@
+.hero {
+  padding: 0;
+  background-image: url("/images/Group10.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
