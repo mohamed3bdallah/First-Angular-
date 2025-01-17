@@ -13,7 +13,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component:homeComponent,
+    component: homeComponent,
     title: 'Home',
   },
   {
@@ -30,6 +30,5 @@ export const routes: Routes = [
     path: '**',
     component: NotFoundComponent,
     title: 'Not Found',
-
   }
 ];
